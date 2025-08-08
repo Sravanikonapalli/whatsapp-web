@@ -5,19 +5,16 @@ A WhatsApp Web-like chat interface built with React, Node.js, Express, MongoDB, 
 
 **Github and live links**
 **Github**
-```
+
 https://github.com/Sravanikonapalli/whatsapp-web.git
-```
+
 
 **Backend**
-```
-[Backend live url]()
-```
+[Backend live url](https://whatsapp-web-a88p.onrender.com)
 
 **frontend**
-```
 [frontend live url]()
-```
+
 ------
 **Features**
 - WhatsApp Web-like UI: Clean, responsive interface that mimics WhatsApp Web
