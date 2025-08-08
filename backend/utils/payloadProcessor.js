@@ -1,4 +1,3 @@
-// backend/utils/payloadProcessor.js
 import fs from 'fs';
 import path from 'path';
 import Message from '../models/Message.js';
@@ -9,7 +8,7 @@ const BUSINESS_NUMBER = '918329446654'; // Our business number
 export async function processPayloads() {
   // Clear existing messages to start fresh
   await Message.deleteMany({});
-  console.log("🗑️ Cleared existing messages");
+  console.log("Cleared existing messages");
   
   const files = fs.readdirSync(PAYLOAD_DIR);
   const processedIds = new Set(); // Track processed message IDs
@@ -30,9 +29,8 @@ export async function processPayloads() {
     for (const msg of messages) {
       const { from, text, timestamp, id } = msg;
 
-      // Skip if we've already processed this message
       if (processedIds.has(id)) {
-        console.log(`⚠️ Message with ID ${id} already processed, skipping`);
+        console.log(`Message with ID ${id} already processed, skipping`);
         continue;
       }
       
@@ -55,7 +53,7 @@ export async function processPayloads() {
           direction
         });
 
-        console.log(`✅ Processed message from ${from}`);
+        console.log(`Processed message from ${from}`);
       } catch (err) {
         console.error(`Error processing message: ${err}`);
       }
@@ -74,9 +72,9 @@ export async function processPayloads() {
         );
 
         if (updated) {
-          console.log(`📝 Updated status of ${id} to ${status}`);
+          console.log(`Updated status of ${id} to ${status}`);
         } else {
-          console.warn(`⚠️ Message with ID ${id} not found`);
+          console.warn(`Message with ID ${id} not found`);
         }
       } catch (err) {
         console.error(`Error updating status: ${err}`);

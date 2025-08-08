@@ -1,4 +1,3 @@
-// backend/controllers/messageController.js
 import Message from "../models/Message.js";
 
 export const getConversations = async (req, res) => {

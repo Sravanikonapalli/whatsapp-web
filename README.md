@@ -6,6 +6,7 @@ A WhatsApp Web-like chat interface built with React, Node.js, Express, MongoDB, 
 **Github and live links**
 **Github**
 ```
+https://github.com/Sravanikonapalli/whatsapp-web.git
 ```
 
 **Backend**
@@ -45,7 +46,7 @@ A WhatsApp Web-like chat interface built with React, Node.js, Express, MongoDB, 
 **Clone the repository**
 
 ```
-git clone <repository-url>
+git clone https://github.com/Sravanikonapalli/whatsapp-web.git
 cd whatsapp web(rapidquest)
 ```
 

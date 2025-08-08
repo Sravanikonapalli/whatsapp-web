@@ -1,4 +1,3 @@
-// backend/server.js
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
@@ -52,12 +51,12 @@ mongoose
     useUnifiedTopology: true
   })
   .then(() => {
-    console.log('✅ MongoDB connected');
+    console.log('MongoDB connected');
     
     // Start server
     const PORT = process.env.PORT || 5000;
     server.listen(PORT, () => {
-      console.log(`🚀 Server running at http://localhost:${PORT}`);
+      console.log(`Server running at http://localhost:${PORT}`);
     });
   })
-  .catch((err) => console.error('❌ MongoDB connection error:', err));
+  .catch((err) => console.error('MongoDB connection error:', err));
